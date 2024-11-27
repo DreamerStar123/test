@@ -7,15 +7,15 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // OAuth URLs
-const AUTHORIZE_URL = `https://login.microsoftonline.com/${process.env.TENANT_ID}/oauth2/v2.0/authorize`;
-const TOKEN_URL = `https://login.microsoftonline.com/${process.env.TENANT_ID}/oauth2/v2.0/token`;
+const AUTHORIZE_URL = `https://login.microsoftonline.com/${process.env.AZURE_TENANT_ID}/oauth2/v2.0/authorize`;
+const TOKEN_URL = `https://login.microsoftonline.com/${process.env.AZURE_TENANT_ID}/oauth2/v2.0/token`;
 
 // Step 1: Redirect user to Microsoft's authorization page
 app.get("/auth", (req, res) => {
   const params = new URLSearchParams({
-    client_id: process.env.CLIENT_ID,
+    client_id: process.env.AZURE_CLIENT_ID,
     response_type: "code",
-    redirect_uri: process.env.REDIRECT_URI,
+    redirect_uri: process.env.AZURE_REDIRECT_URI,
     scope: "Calendars.ReadWrite offline_access",
     response_mode: "query",
     // state: "12345", // Optional for CSRF protection
@@ -37,11 +37,11 @@ app.get("/auth/callback", async (req, res) => {
     const tokenResponse = await axios.post(
       TOKEN_URL,
       new URLSearchParams({
-        client_id: process.env.CLIENT_ID,
-        client_secret: process.env.CLIENT_SECRET,
+        client_id: process.env.AZURE_CLIENT_ID,
+        client_secret: process.env.AZURE_CLIENT_SECRET,
         grant_type: "authorization_code",
         code: code,
-        redirect_uri: process.env.REDIRECT_URI,
+        redirect_uri: process.env.AZURE_REDIRECT_URI,
       }),
       {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -71,8 +71,8 @@ app.post("/auth/refresh", async (req, res) => {
     const tokenResponse = await axios.post(
       TOKEN_URL,
       new URLSearchParams({
-        client_id: process.env.CLIENT_ID,
-        client_secret: process.env.CLIENT_SECRET,
+        client_id: process.env.AZURE_CLIENT_ID,
+        client_secret: process.env.AZURE_CLIENT_SECRET,
         grant_type: "refresh_token",
         refresh_token: refresh_token,
       }),

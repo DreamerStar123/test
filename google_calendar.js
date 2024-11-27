@@ -1,19 +1,16 @@
 const { google } = require('googleapis');
 const express = require('express');
 const session = require('express-session');
+require("dotenv").config();
 
 const app = express();
 const PORT = 5000;
 
 // Replace these with your own credentials
-const CLIENT_ID = '727774901928-p95rnppd6rfhisjvj9nk7rp88qgbbeci.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
-// const CLIENT_ID = '1236426385-a7gluu9h9fh61tiinlginq7mgq6v1la9.apps.googleusercontent.com';
-// const CLIENT_SECRET = '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';
 const REDIRECT_URI = 'http://localhost:5000/oauth2callback';
 
 // Create an OAuth2 client
-const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+const oAuth2Client = new google.auth.OAuth2(process.env.GCP_CLIENT_ID, process.env.GCP_CLIENT_SECRET, REDIRECT_URI);
 
 // Set up session middleware
 app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: true }));
