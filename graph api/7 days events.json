@@ -1,0 +1,153 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('outlook_B66372FCEFD3495E%40outlook.com')/calendarView",
+    "value": [
+        {
+            "@odata.etag": "W/\"U1/Ly/eFikGGn+U1Yv3AUgABGa9h6A==\"",
+            "id": "AQMkADAwATNiZmYAZC02YTYxLTdkMTYtMDACLTAwCgBGAAADRkn7cP7mqUyr6VxABlK66gcAU1-LywD3hYpBhp-lNWL9wFIAAAIBDQAAAFNfy8sA94WKQYaf5TVi-cBSAAEZqYHdAAAA",
+            "createdDateTime": "2024-11-27T13:53:17.7218908Z",
+            "lastModifiedDateTime": "2024-11-27T13:56:21.0921247Z",
+            "changeKey": "U1/Ly/eFikGGn+U1Yv3AUgABGa9h6A==",
+            "categories": [],
+            "transactionId": "0a63c962-5af5-4549-ab11-84b52073f093",
+            "originalStartTimeZone": "Central Standard Time",
+            "originalEndTimeZone": "Central Standard Time",
+            "iCalUId": "040000008200E00074C5B7101A82E00800000000B36E3BB6D340DB010000000000000000100000006E6382E09DA9AC40825F3CCC5D9BBB77",
+            "uid": "040000008200E00074C5B7101A82E00800000000B36E3BB6D340DB010000000000000000100000006E6382E09DA9AC40825F3CCC5D9BBB77",
+            "reminderMinutesBeforeStart": 15,
+            "isReminderOn": true,
+            "hasAttachments": false,
+            "subject": "as",
+            "bodyPreview": "sdfw",
+            "importance": "normal",
+            "sensitivity": "normal",
+            "isAllDay": false,
+            "isCancelled": false,
+            "isOrganizer": true,
+            "responseRequested": true,
+            "seriesMasterId": null,
+            "showAs": "busy",
+            "type": "singleInstance",
+            "webLink": "https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC02YTYxLTdkMTYtMDACLTAwCgBGAAADRkn7cP7mqUyr6VxABlK66gcAU1%2FLywD3hYpBhp%2FlNWL9wFIAAAIBDQAAAFNfy8sA94WKQYaf5TVi%2FcBSAAEZqYHdAAAA&exvsurl=1&path=/calendar/item",
+            "onlineMeetingUrl": null,
+            "isOnlineMeeting": false,
+            "onlineMeetingProvider": "unknown",
+            "allowNewTimeProposals": true,
+            "occurrenceId": null,
+            "isDraft": false,
+            "hideAttendees": false,
+            "responseStatus": {
+                "response": "organizer",
+                "time": "0001-01-01T00:00:00Z"
+            },
+            "body": {
+                "contentType": "html",
+                "content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)\">\r\nsdfw</div>\r\n</body>\r\n</html>\r\n"
+            },
+            "start": {
+                "dateTime": "2024-11-27T14:00:00.0000000",
+                "timeZone": "UTC"
+            },
+            "end": {
+                "dateTime": "2024-11-27T14:30:00.0000000",
+                "timeZone": "UTC"
+            },
+            "location": {
+                "displayName": "sd",
+                "locationType": "default",
+                "uniqueId": "sd",
+                "uniqueIdType": "private"
+            },
+            "locations": [
+                {
+                    "displayName": "sd",
+                    "locationType": "default",
+                    "uniqueId": "sd",
+                    "uniqueIdType": "private"
+                }
+            ],
+            "recurrence": null,
+            "attendees": [],
+            "organizer": {
+                "emailAddress": {
+                    "name": "High Peak",
+                    "address": "outlook_B66372FCEFD3495E@outlook.com"
+                }
+            },
+            "onlineMeeting": null
+        },
+        {
+            "@odata.etag": "W/\"U1/Ly/eFikGGn+U1Yv3AUgABGa9h6Q==\"",
+            "id": "AQMkADAwATNiZmYAZC02YTYxLTdkMTYtMDACLTAwCgBGAAADRkn7cP7mqUyr6VxABlK66gcAU1-LywD3hYpBhp-lNWL9wFIAAAIBDQAAAFNfy8sA94WKQYaf5TVi-cBSAAEZqYHeAAAA",
+            "createdDateTime": "2024-11-27T13:54:42.3238796Z",
+            "lastModifiedDateTime": "2024-11-27T13:56:43.1353169Z",
+            "changeKey": "U1/Ly/eFikGGn+U1Yv3AUgABGa9h6Q==",
+            "categories": [],
+            "transactionId": "0fd1aa1e-dfe6-82f6-ee2c-f934b65b6ad4",
+            "originalStartTimeZone": "Central Standard Time",
+            "originalEndTimeZone": "Central Standard Time",
+            "iCalUId": "040000008200E00074C5B7101A82E008000000001585A7E8D340DB0100000000000000001000000061970014BACBAF47B1B0F0C53C60F50C",
+            "uid": "040000008200E00074C5B7101A82E008000000001585A7E8D340DB0100000000000000001000000061970014BACBAF47B1B0F0C53C60F50C",
+            "reminderMinutesBeforeStart": 15,
+            "isReminderOn": true,
+            "hasAttachments": false,
+            "subject": null,
+            "bodyPreview": "sdfwes",
+            "importance": "normal",
+            "sensitivity": "normal",
+            "isAllDay": false,
+            "isCancelled": false,
+            "isOrganizer": true,
+            "responseRequested": true,
+            "seriesMasterId": null,
+            "showAs": "busy",
+            "type": "singleInstance",
+            "webLink": "https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC02YTYxLTdkMTYtMDACLTAwCgBGAAADRkn7cP7mqUyr6VxABlK66gcAU1%2FLywD3hYpBhp%2FlNWL9wFIAAAIBDQAAAFNfy8sA94WKQYaf5TVi%2FcBSAAEZqYHeAAAA&exvsurl=1&path=/calendar/item",
+            "onlineMeetingUrl": null,
+            "isOnlineMeeting": false,
+            "onlineMeetingProvider": "unknown",
+            "allowNewTimeProposals": true,
+            "occurrenceId": null,
+            "isDraft": false,
+            "hideAttendees": false,
+            "responseStatus": {
+                "response": "organizer",
+                "time": "0001-01-01T00:00:00Z"
+            },
+            "body": {
+                "contentType": "html",
+                "content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)\">\r\nsdfwes</div>\r\n</body>\r\n</html>\r\n"
+            },
+            "start": {
+                "dateTime": "2024-11-27T15:00:00.0000000",
+                "timeZone": "UTC"
+            },
+            "end": {
+                "dateTime": "2024-11-27T15:30:00.0000000",
+                "timeZone": "UTC"
+            },
+            "location": {
+                "displayName": "sdwe",
+                "locationType": "default",
+                "uniqueId": "sdwe",
+                "uniqueIdType": "private"
+            },
+            "locations": [
+                {
+                    "displayName": "sdwe",
+                    "locationType": "default",
+                    "uniqueId": "sdwe",
+                    "uniqueIdType": "private"
+                }
+            ],
+            "recurrence": null,
+            "attendees": [],
+            "organizer": {
+                "emailAddress": {
+                    "name": "High Peak",
+                    "address": "outlook_B66372FCEFD3495E@outlook.com"
+                }
+            },
+            "onlineMeeting": null
+        }
+    ]
+}

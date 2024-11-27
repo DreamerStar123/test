@@ -34,7 +34,7 @@ async function getCalendarEvents() {
     });
 
     try {
-        const events = await client.api('/users').get();
+        const events = await client.api('/me/events').get();
         console.log(events);
     } catch (error) {
         console.error(`Error fetching calendar events: ${error}`);
