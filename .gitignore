@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 turbo-tabs-firebase-adminsdk-vk1px-e1798541d6.json
+.env
