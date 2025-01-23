@@ -14,7 +14,7 @@ last_viewed = activity[1].xpath('.//span[3]')[0].text.strip()
 interviewing = activity[2].xpath('.//div[1]')[0].text.strip()
 invites_sent = activity[3].xpath('.//div[1]')[0].text.strip()
 unanswered_invites = activity[4].xpath('.//div[1]')[0].text.strip()
-
+ 
 # Print the results
 print("proposals:           ", proposals)
 print("last_viewed:         ", last_viewed)
