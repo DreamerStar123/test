@@ -2,13 +2,13 @@ import requests
 from lxml import html
 
 # URL of the Upwork job listing
-url = 'https://www.upwork.com/jobs/~021881745060515567376'
-# url = 'https://www.upwork.com'
+# url = 'https://www.upwork.com/jobs/~021881745060515567376'
 # url = 'https://www.w3schools.com/tags/ref_httpmessages.asp'
+url = 'https://www.datacamp.com'
 
 # Send a request to the webpage
 headers = {
-    'Host': 'www.w3schools.com',
+    'Host': 'www.datacamp.com',
     'User-Agent': 'PostmanRuntime/7.43.0',
     'Accept': '*/*',
     'Accept-Encoding': 'gzip, deflate, br',
