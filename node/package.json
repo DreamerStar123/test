@@ -12,6 +12,7 @@
     "google-auth-library": "^9.15.0",
     "googleapis": "^144.0.0",
     "http-server": "^14.1.1",
+    "openai": "^4.80.0",
     "react": "^18.3.1",
     "request": "^2.88.2"
   },
@@ -23,5 +24,6 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }

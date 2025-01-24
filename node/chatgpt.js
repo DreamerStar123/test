@@ -1,34 +1,17 @@
-const axios = require('axios');
+import OpenAI from "openai";
 
-const apiKey = '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'; // Replace with your API key
-const apiUrl = 'https://api.openai.com/v1/chat/completions';
+const openai = new OpenAI({ apiKey: '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' });
 
-async function sendMessageToChatGPT(message) {
-    try {
-        const response = await axios.post(
-            apiUrl,
-            {
-                model: 'gpt-4o-mini', // Replace with 'gpt-4' if needed
-                messages: [
-                    { role: 'system', content: 'You are a helpful assistant.' },
-                    { role: 'user', content: message },
-                ],
-                max_tokens: 150,
-                temperature: 0.7,
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${apiKey}`,
-                },
-            }
-        );
-
-        console.log('ChatGPT Response:', response.data.choices[0].message.content);
-    } catch (error) {
-        console.error('Error communicating with ChatGPT:', error.response?.data || error.message);
+async function main() {
+    const stream = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: "Say this is a test" }],
+        store: true,
+        stream: true,
+    });
+    for await (const chunk of stream) {
+        process.stdout.write(chunk.choices[0]?.delta?.content || "");
     }
 }
 
-// Example usage
-sendMessageToChatGPT('Hello, how are you?');
+main();
