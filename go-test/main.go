@@ -39,4 +39,7 @@ func Same(t1, t2 *tree.Tree) bool {
 func main() {
 	fmt.Println(Same(tree.New(1), tree.New(1)))
 	fmt.Println(Same(tree.New(1), tree.New(2)))
+
+	const ss = iota
+	fmt.Println(ss)
 }

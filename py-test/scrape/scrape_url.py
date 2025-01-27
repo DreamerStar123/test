@@ -1,34 +1,36 @@
-import requests
+import subprocess
 from lxml import html
 
-# URL of the Upwork job listing
-url = 'https://www.upwork.com/jobs/~021881745060515567376'
-# url = 'https://www.w3schools.com/tags/ref_httpmessages.asp'
+# Define the curl command
+curl_command = [
+    'curl',
+    '--location', 'https://www.upwork.com/jobs/~021881745060515567376',
+    '--header', 'Host: www.upwork.com',
+    '--header', 'User-Agent: PostmanRuntime/7.43.0',
+]
 
-# Send a request to the webpage
-headers = {
-    'Host': 'www.upwork.com',
-    'User-Agent': 'PostmanRuntime/7.43.0',
-    'Accept': '*/*',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Connection': 'keep-alive',
-}
-
-response = requests.get(url, headers=headers)
-
-# Check if the request was successful
-if response.status_code == 200:
+# Execute the curl command and capture the output
+try:
+    result = subprocess.run(curl_command, capture_output=True, text=True, check=True)
+    output = result.stdout  # The output from the command
     # Parse the HTML content
-    tree = html.fromstring(response.content)
+    tree = html.fromstring(output)
 
-    # Example XPath queries to extract data
-    title = tree.xpath('//h1/text()')  # Job title
-    description = tree.xpath('//div[@class="description"]/text()')  # Job description
-    posted_date = tree.xpath('//time/@datetime')  # Posted date
+    # Example XPath queries
+    activity = tree.xpath('//*[@id="main"]/div/div/div/div/div[1]/section[4]/ul/li')
+    proposals = activity[0].xpath('.//span[3]')[0].text.strip()
+    last_viewed = activity[1].xpath('.//span[3]')[0].text.strip()
+    interviewing = activity[2].xpath('.//div[1]')[0].text.strip()
+    invites_sent = activity[3].xpath('.//div[1]')[0].text.strip()
+    unanswered_invites = activity[4].xpath('.//div[1]')[0].text.strip()
 
     # Print the results
-    print("Job Title:", title)
-    print("Job Description:", description)
-    print("Posted Date:", posted_date)
-else:
-    print(f"Failed to retrieve the page. Status code: {response.status_code}")
+    print("proposals:           ", proposals)
+    print("last_viewed:         ", last_viewed)
+    print("interviewing:        ", interviewing)
+    print("invites_sent:        ", invites_sent)
+    print("unanswered_invites:  ", unanswered_invites)
+except subprocess.CalledProcessError as e:
+    print("An error occurred while executing the curl command:")
+    print(e.stderr)
+
