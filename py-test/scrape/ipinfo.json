@@ -1,0 +1,27 @@
+{
+    "ip": "91.207.174.99",
+    "city": "Togoshi",
+    "region": "Tokyo",
+    "country": "JP",
+    "loc": "35.6170, 139.7486",
+    "org": "AS9009 M247 Europe SRL",
+    "postal": "140-0002",
+    "timezone": "Asia/Tokyo",
+    "country_name": "Japan",
+    "isEU": false,
+    "country_flag_url": "https: //cdn.ipinfo.io/static/images/countries-flags/JP.svg",
+    "country_flag": {
+        "emoji": "🇯🇵",
+        "unicode": "U+1F1EF U+1F1F5"
+    },
+    "country_currency": {
+        "code": "JPY",
+        "symbol": "¥"
+    },
+    "continent": {
+        "code": "AS",
+        "name": "Asia"
+    },
+    "latitude": "35.6170",
+    "longitude": "139.7486"
+}
