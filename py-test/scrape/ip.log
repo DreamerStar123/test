@@ -4670,3 +4670,8 @@
 2025-02-14 05:02:39,611 - ERROR - HTTPSConnectionPool(host='ipinfo.io', port=443): Read timed out. (read timeout=2)
 2025-02-14 05:03:56,663 - ERROR - An error occurred while fetching IP details:
 2025-02-14 05:03:56,663 - ERROR - HTTPSConnectionPool(host='ipinfo.io', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000018E5FC3B750>, 'Connection to ipinfo.io timed out. (connect timeout=2)'))
+2025-03-02 22:05:02,298 - INFO - IP: 91.207.174.99
+2025-03-02 22:05:02,298 - INFO - City: Togoshi
+2025-03-02 22:05:02,298 - INFO - Region: Tokyo
+2025-03-02 22:05:02,298 - INFO - Country: JP
+2025-03-02 22:05:02,298 - INFO - Organization: AS9009 M247 Europe SRL

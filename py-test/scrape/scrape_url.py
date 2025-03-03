@@ -8,7 +8,7 @@ from plyer import notification
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='scrape.log', filemode='a')
 
-joblist = ["021885053662272546203"]
+joblist = ["021896395618817438243"]
 
 def scrape_url(job_id):
     # Define the curl command

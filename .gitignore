@@ -1,5 +1,5 @@
 py-test/network_status.log
+py-test/scrape/__pycache__
 djtest/db.sqlite3
 djtest/hello/__pycache__
 djtest/hello/migrations
-py-test/scrape/scrape.log
