@@ -75,7 +75,7 @@ def scrape_all():
 scrape_all()
 
 # Schedule the job every 10 minutes
-schedule.every(5).minutes.do(scrape_all)
+schedule.every(20).minutes.do(scrape_all)
 
 while True:
     schedule.run_pending()
