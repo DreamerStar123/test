@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/hmac"
+	"crypto/sha256"
 	"crypto/sha512"
 	"encoding/base64"
 	"encoding/hex"
@@ -9,7 +10,6 @@ import (
 	"io"
 	"net/http"
 	"strings"
-	"time"
 )
 
 func calcSign(dataToSign string) string {
@@ -37,10 +37,14 @@ func sendRequest(url, payload string) {
 	clientKey := "0ee4453c-d8ef-4e39-9deb-a897acc74713"
 	apiURL := "https://psp.stg.01123581.com" + url
 
-	// Generate nonce (current timestamp in nanoseconds)
-	nonce := fmt.Sprintf("%d", time.Now().UnixNano())
+	dataToSign := url
+	if payload != "" {
+		// Compute SHA-256 hash of the payload
+		hash := sha256.Sum256([]byte(payload))
+		dataToSign += hex.EncodeToString(hash[:])
+	}
 
-	signature := calcSign(url)
+	signature := calcSign(dataToSign)
 
 	// Create HTTP request
 	req, err := http.NewRequest("POST", apiURL, strings.NewReader(payload))
@@ -53,7 +57,6 @@ func sendRequest(url, payload string) {
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("key", clientKey)
 	req.Header.Set("signature", signature)
-	req.Header.Set("nonce", nonce)
 
 	// Send the request
 	client := &http.Client{}
@@ -71,10 +74,28 @@ func sendRequest(url, payload string) {
 		return
 	}
 
+	fmt.Println("Status:", resp.StatusCode)
 	fmt.Println("Response:", string(body))
 }
 
 func main() {
 	// calcSign("/v3/payouts?authorize=false")
-	sendRequest("/v3/payouts?authorize=false", `{"username": "testuser"}`)
+	sendRequest("/v3/payouts?authorize=false", `{
+		"username": "testuser",
+		"accountId": "00000000-0000-0000-0000-00000000000",
+		"reference": "ref",
+		"callbackUrl": "https://api.fortris.com",
+		"requestedAmount": {
+			"currency": "XBT",
+			"amount": 1
+		},
+		"destinationAddress": "0x333dF6726B03072dC88cfF84dAD6089D42F47668",
+		"network": "BITCOIN",
+		"verifyBalance": true,
+		"feePolicy": "CUSTOM",
+		"customFeeRate": 5,
+		"subtractFee": true,
+		"useCoinConsolidation": true,
+		"nonce": 0
+	}`)
 }
