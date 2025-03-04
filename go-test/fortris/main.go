@@ -2,7 +2,6 @@ package main
 
 import (
 	"crypto/hmac"
-	"crypto/sha256"
 	"crypto/sha512"
 	"encoding/base64"
 	"encoding/hex"
@@ -13,34 +12,35 @@ import (
 	"time"
 )
 
-func main() {
+func calcSign(dataToSign string) string {
 	// Replace with your actual values
-	clientKey := "your_client_key"
-	secret := "your_base64_encoded_secret"
-	apiURL := "https://api.fortris.com/deposits"
-	payload := `{"your": "payload"}`
-
-	// Generate nonce (current timestamp in nanoseconds)
-	nonce := fmt.Sprintf("%d", time.Now().UnixNano())
-
-	// Compute SHA-256 hash of the payload
-	hash := sha256.Sum256([]byte(payload))
-	hashHex := hex.EncodeToString(hash[:])
-
-	// Create the data to sign (URI + SHA-256 hash of payload)
-	dataToSign := "/deposits" + hashHex
+	secret := "YzNpUzVKLyNMeiZaRWJgdyRcWVNdRn5lOmt8RWptUSZ9YFZYTS1AOHxsTG9GcXh9Ryp+J1R5O28xMX1TZEpBbz9MdWhnZHNZIXMrKFI3LEZocSll"
 
 	// Decode the base64-encoded secret
 	decodedSecret, err := base64.StdEncoding.DecodeString(secret)
 	if err != nil {
 		fmt.Println("Error decoding secret:", err)
-		return
+		return "error"
 	}
 
 	// Compute HMAC-SHA512 signature
 	h := hmac.New(sha512.New, decodedSecret)
 	h.Write([]byte(dataToSign))
 	signature := hex.EncodeToString(h.Sum(nil))
+	println(signature)
+
+	return signature
+}
+
+func sendRequest(url, payload string) {
+	// Replace with your actual values
+	clientKey := "0ee4453c-d8ef-4e39-9deb-a897acc74713"
+	apiURL := "https://psp.stg.01123581.com" + url
+
+	// Generate nonce (current timestamp in nanoseconds)
+	nonce := fmt.Sprintf("%d", time.Now().UnixNano())
+
+	signature := calcSign(url)
 
 	// Create HTTP request
 	req, err := http.NewRequest("POST", apiURL, strings.NewReader(payload))
@@ -72,4 +72,9 @@ func main() {
 	}
 
 	fmt.Println("Response:", string(body))
+}
+
+func main() {
+	// calcSign("/v3/payouts?authorize=false")
+	sendRequest("/v3/payouts?authorize=false", `{"username": "testuser"}`)
 }

@@ -1,0 +1,11 @@
+{
+    "INVALID_HMAC_SIGNATURE": {
+        "error": "Request for clientKey=0ee4453c-d8ef-4e39-9deb-a897acc74713 was not successful because of HMAC Signature validation.",
+        "code": "INVALID_HMAC_SIGNATURE",
+        "timestamp": "2025-03-04T02:26:37.507285241"
+    },
+    "request body missing": {
+        "error": "Unable to convert the request: Required request body is missing: org.springframework.http.ResponseEntity<es.technest.cams.psp.payout.v3.feature.create.begin.resource.CreatePayoutResponseDto> es.technest.cams.psp.payout.v3.feature.create.begin.resource.CreatePayoutResource.createPayout(java.lang.String,java.lang.Boolean,es.technest.cams.psp.payout.v3.feature.create.begin.resource.CreatePayoutRequestDto)",
+        "timestamp": "2025-03-04T02:32:47.223841927"
+    }
+}
