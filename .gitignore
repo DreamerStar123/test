@@ -3,3 +3,4 @@ py-test/scrape/__pycache__
 djtest/db.sqlite3
 djtest/hello/__pycache__
 djtest/hello/migrations
+go-test/fortris/.env

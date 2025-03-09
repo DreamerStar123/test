@@ -8,13 +8,17 @@ import (
 	"encoding/hex"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
+	"os"
 	"strings"
+
+	"github.com/joho/godotenv"
 )
 
 func calcSign(dataToSign string) string {
 	// Replace with your actual values
-	secret := "YzNpUzVKLyNMeiZaRWJgdyRcWVNdRn5lOmt8RWptUSZ9YFZYTS1AOHxsTG9GcXh9Ryp+J1R5O28xMX1TZEpBbz9MdWhnZHNZIXMrKFI3LEZocSll"
+	secret := os.Getenv("CLIENT_SECRET")
 
 	// Decode the base64-encoded secret
 	decodedSecret, err := base64.StdEncoding.DecodeString(secret)
@@ -34,8 +38,8 @@ func calcSign(dataToSign string) string {
 
 func sendRequest(url, payload string) {
 	// Replace with your actual values
-	clientKey := "0ee4453c-d8ef-4e39-9deb-a897acc74713"
-	apiURL := "https://psp.stg.01123581.com" + url
+	clientKey := os.Getenv("CLIENT_ID")
+	apiURL := os.Getenv("BASE_URL") + url
 
 	dataToSign := url
 	if payload != "" {
@@ -79,23 +83,49 @@ func sendRequest(url, payload string) {
 }
 
 func main() {
+	// Load environment variables from .env file
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	// calcSign("/v3/payouts?authorize=false")
+
 	sendRequest("/v3/payouts?authorize=false", `{
 		"username": "testuser",
-		"accountId": "00000000-0000-0000-0000-00000000000",
+		"accountId": "9db3eb0a-53e4-4bcf-8e3d-8e3a2bdced09",
 		"reference": "ref",
-		"callbackUrl": "https://api.fortris.com",
+		"callbackUrl": "https://psp.stg.01123581.com",
 		"requestedAmount": {
 			"currency": "XBT",
 			"amount": 1
 		},
-		"destinationAddress": "0x333dF6726B03072dC88cfF84dAD6089D42F47668",
+		"destinationAddress": "1BvBMSEYstWetqTFn5Au4m4GFyFei9PT7Z",
 		"network": "BITCOIN",
 		"verifyBalance": true,
 		"feePolicy": "CUSTOM",
 		"customFeeRate": 5,
 		"subtractFee": true,
 		"useCoinConsolidation": true,
-		"nonce": 0
+		"nonce": 1006
 	}`)
+
+	// sendRequest("/v3/payouts?authorize=false", `{
+	// 	"username": "testuser",
+	// 	"accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+	// 	"reference": "ref",
+	// 	"callbackUrl": "https://psp.stg.01123581.com",
+	// 	"requestedAmount": {
+	// 		"currency": "USDT",
+	// 		"amount": 1
+	// 	},
+	// 	"destinationAddress": "0xA1e8b05C2F2cB4C3C4E3EaF7A7eA6E8A2C8F3B5D",
+	// 	"network": "ETHEREUM",
+	// 	"verifyBalance": true,
+	// 	"feePolicy": "CUSTOM",
+	// 	"customFeeRate": 5,
+	// 	"subtractFee": true,
+	// 	"useCoinConsolidation": true,
+	// 	"nonce": 1003
+	// }`)
 }
