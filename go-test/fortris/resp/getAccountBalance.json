@@ -1,0 +1,82 @@
+{
+    "accountBalanceFilters": {
+        "accountIds": [
+            "bfc55973-7cec-4173-803a-47d107ef2af0"
+        ],
+        "queryDate": "2025-03-11T04:11:51.082Z"
+    },
+    "balances": [
+        {
+            "accountId": "bfc55973-7cec-4173-803a-47d107ef2af0",
+            "fundsCanBeSpent": true,
+            "cryptoCurrency": "XBT",
+            "network": "BITCOIN",
+            "cryptoBalance": {
+                "total": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "available": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "confirmed": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "locked": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "unconfirmedReceived": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "sentUnconfirmed": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                },
+                "selfUnconfirmedReceived": {
+                    "amount": 0.00000000,
+                    "currency": "XBT"
+                }
+            },
+            "fiatBalance": {
+                "total": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "available": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "confirmed": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "locked": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "unconfirmedReceived": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "sentUnconfirmed": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                },
+                "selfUnconfirmedReceived": {
+                    "amount": 0.00,
+                    "currency": "USD"
+                }
+            },
+            "exchangeRate": {
+                "rate": 79744.82,
+                "fromCurrency": "XBT",
+                "toCurrency": "USD",
+                "measuredDate": "2025-03-11T04:09:52.252370673Z"
+            }
+        }
+    ]
+}

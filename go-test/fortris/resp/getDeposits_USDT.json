@@ -1,0 +1,59 @@
+{
+    "filters": {
+        "queryDate": "2025-03-20T04:07:16.297Z",
+        "depositIds": [
+            "fe090e04-8ec3-43ef-8e44-a23fd3d27658"
+        ]
+    },
+    "results": {
+        "content": [
+            {
+                "depositId": "fe090e04-8ec3-43ef-8e44-a23fd3d27658",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 0.10,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x7feFA7944361c9f3fC00192cf679776eBa99794C",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-20T04:06:48.627Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-20T04:06:48.625Z"
+                },
+                "receivedFunds": []
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "empty": true,
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 20,
+            "paged": true,
+            "unpaged": false
+        },
+        "totalPages": 1,
+        "totalElements": 1,
+        "last": true,
+        "size": 20,
+        "number": 0,
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "first": true,
+        "empty": false
+    }
+}

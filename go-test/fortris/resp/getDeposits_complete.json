@@ -1,0 +1,82 @@
+{
+    "filters": {
+        "queryDate": "2025-03-12T04:19:22.211Z",
+        "depositIds": [
+            "3a5375a0-a4ee-4064-b3eb-afe7779e5909"
+        ]
+    },
+    "results": {
+        "content": [
+            {
+                "depositId": "3a5375a0-a4ee-4064-b3eb-afe7779e5909",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 0.10,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0xC6B9D0260F6d02D2E011BC15A1A114B5E5a96f07",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "COMPLETED",
+                "createdDate": "2025-03-12T04:11:04.686Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T04:11:04.685Z"
+                },
+                "receivedFunds": [
+                    {
+                        "txHash": "0x23c557ced573a817bf8c0c5317b5a816f5fd5cad381f81523e80ea9fa24be2c8",
+                        "amount": {
+                            "amount": 0.100000000000000000,
+                            "currency": "ETH"
+                        },
+                        "fee": {
+                            "amount": 0.000031857061467000,
+                            "currency": "ETH"
+                        },
+                        "createdDate": "2025-03-12T04:13:00Z",
+                        "confirmedDate": "2025-03-12T04:13:00Z",
+                        "state": "CONFIRMED",
+                        "rate": {
+                            "rate": 1884.99815319,
+                            "fromCurrency": "ETH",
+                            "toCurrency": "USD",
+                            "measuredDate": "2025-03-12T04:13:00Z"
+                        },
+                        "transactionId": "93020109-3aaa-4a6d-b06c-c7e7f56059b6",
+                        "confirmations": 15
+                    }
+                ]
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "empty": true,
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 20,
+            "paged": true,
+            "unpaged": false
+        },
+        "totalPages": 1,
+        "totalElements": 1,
+        "last": true,
+        "size": 20,
+        "number": 0,
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "first": true,
+        "empty": false
+    }
+}

@@ -7,7 +7,7 @@ from plyer import notification
 import pandas as pd
 from openpyxl import load_workbook
 
-file_path = 'upwork_stats.xlsx'
+file_path = 'E:\\note\\task\\upwork\\upwork_stats.xlsx'
 
 def convert_int(val):
     return int(val.translate(str.maketrans('', '', '(),')))

@@ -7,7 +7,7 @@ import (
 
 // validateURL checks if the provided URL string is valid using regex.
 func validateURL(urlStr string) bool {
-	re := regexp.MustCompile(`^(https?|ftp):\/\/((([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\d{1,3}(\.\d{1,3}){3}))(:\d{1,5})?)(\/[^\s]*)?$`)
+	re := regexp.MustCompile(`^((https?|ftp):\/\/)?((([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\d{1,3}(\.\d{1,3}){3}))(:\d{1,5})?)(\/[^\s]*)?$`)
 	return re.MatchString(urlStr)
 }
 
@@ -19,7 +19,9 @@ func main() {
 		"https://255.255.255.255",
 		"https://www",
 		"https://12.23",
-		"ftp://example.com/file",
+		"ftp:/example.com/file",
+		"example.com",
+		"ftp//example.com/",
 	}
 
 	for _, u := range testURLs {
