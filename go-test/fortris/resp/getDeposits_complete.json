@@ -1,53 +1,54 @@
 {
     "filters": {
-        "queryDate": "2025-03-12T04:19:22.211Z",
+        "queryDate": "2025-04-03T12:46:17.202Z",
         "depositIds": [
-            "3a5375a0-a4ee-4064-b3eb-afe7779e5909"
+            "3cf4ac20-f3bc-4a7b-8e95-fa33009ffd5b"
         ]
     },
     "results": {
         "content": [
             {
-                "depositId": "3a5375a0-a4ee-4064-b3eb-afe7779e5909",
+                "depositId": "3cf4ac20-f3bc-4a7b-8e95-fa33009ffd5b",
                 "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
-                "callbackUrl": "https://psp.stg.01123581.com",
-                "reference": "ref",
+                "callbackUrl": "https://webhook.site/be2ae032-c1cf-46b2-b278-f983f3ab3150",
+                "reference": "16c9fae1-b213-498b-8086-cc077df7f0ea",
+                "customerId": "cfc2f313-e999-4b45-9cea-65ef6ddea4b1",
                 "requestedAmountInCrypto": {
-                    "amount": 0.10,
+                    "amount": 40.00,
                     "currency": "USDT"
                 },
-                "receiverAddress": "0xC6B9D0260F6d02D2E011BC15A1A114B5E5a96f07",
+                "receiverAddress": "0xcC8b51e0b8A3a51d6FD7529d302C7E46CDd8B2Ce",
                 "network": "ETHEREUM",
                 "cryptoCurrency": "USDT",
                 "depositState": "COMPLETED",
-                "createdDate": "2025-03-12T04:11:04.686Z",
+                "createdDate": "2025-04-02T15:45:07.093Z",
                 "fixedExchangeRate": {
                     "rate": 1,
                     "fromCurrency": "USDT",
                     "toCurrency": "USDT",
-                    "measuredDate": "2025-03-12T04:11:04.685Z"
+                    "measuredDate": "2025-04-02T15:45:07.093Z"
                 },
                 "receivedFunds": [
                     {
-                        "txHash": "0x23c557ced573a817bf8c0c5317b5a816f5fd5cad381f81523e80ea9fa24be2c8",
+                        "txHash": "0x892cac8ebb097bf901aef1261f0fca82ccb56541ee565b8ae7b0d791ea0b7738",
                         "amount": {
-                            "amount": 0.100000000000000000,
-                            "currency": "ETH"
+                            "amount": 0.01,
+                            "currency": "USDT"
                         },
                         "fee": {
-                            "amount": 0.000031857061467000,
+                            "amount": 0.000095177460930867,
                             "currency": "ETH"
                         },
-                        "createdDate": "2025-03-12T04:13:00Z",
-                        "confirmedDate": "2025-03-12T04:13:00Z",
+                        "createdDate": "2025-04-02T15:57:24Z",
+                        "confirmedDate": "2025-04-02T15:57:24Z",
                         "state": "CONFIRMED",
                         "rate": {
-                            "rate": 1884.99815319,
-                            "fromCurrency": "ETH",
+                            "rate": 0.99900011,
+                            "fromCurrency": "USDT",
                             "toCurrency": "USD",
-                            "measuredDate": "2025-03-12T04:13:00Z"
+                            "measuredDate": "2025-04-02T15:57:24Z"
                         },
-                        "transactionId": "93020109-3aaa-4a6d-b06c-c7e7f56059b6",
+                        "transactionId": "09aa74cd-fde8-4714-a05f-a9a3211ac9b8",
                         "confirmations": 15
                     }
                 ]

@@ -1,0 +1,51 @@
+{
+    "callbackId": "f9ae240c-367f-396c-bb98-8aac6f132819",
+    "callbackType": "DEPOSIT_COMPLETED",
+    "depositId": "4bbbc230-694e-4223-937f-67ce214841cc",
+    "reference": "ref",
+    "requestedAmountInCrypto": {
+        "amount": 0.02,
+        "currency": "USDT"
+    },
+    "network": "ETHEREUM",
+    "cryptoCurrency": "USDT",
+    "fixedExchangeRate": {
+        "rate": 1,
+        "fromCurrency": "USDT",
+        "toCurrency": "USDT",
+        "measuredDate": "2025-03-28T19:24:22.383Z"
+    },
+    "depositState": "COMPLETED",
+    "receiverAddress": "0x292F6AC411848419f76509e2f233Cc6A948c1240",
+    "receivedFunds": [
+        {
+            "txHash": "0xc147a83a82ee0fbe173ede1ed6f55728e007498ef2ad63acbe18753cf36f24ef",
+            "amount": {
+                "amount": 0.02,
+                "currency": "USDT"
+            },
+            "fee": {
+                "amount": 0.00009535325613219,
+                "currency": "ETH"
+            },
+            "createdDate": "2025-03-28T19:25:12Z",
+            "confirmedDate": "2025-03-28T19:25:12Z",
+            "state": "CONFIRMED",
+            "rate": {
+                "rate": 1.01999792,
+                "fromCurrency": "USDT",
+                "toCurrency": "USD",
+                "measuredDate": "2025-03-28T19:25:12Z"
+            },
+            "transactionId": "881f6985-d424-4dd5-b064-7baca4ca546d"
+        }
+    ],
+    "totalReceivedAmountInCrypto": {
+        "amount": 0.02,
+        "currency": "USDT"
+    },
+    "totalReceivedAmountInFiat": {
+        "amount": 0.02,
+        "currency": "USD"
+    }
+}

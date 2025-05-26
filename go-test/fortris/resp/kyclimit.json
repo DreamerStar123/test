@@ -1,0 +1,82 @@
+{
+    "levels": [
+        {
+            "limit": 500000,
+            "count_limit": 730,
+            "daily_limit": 100000,
+            "daily_count_limit": 2,
+            "monthly_limit": 500000,
+            "monthly_count_limit": 10,
+            "expression": {
+                "email": {
+                    "required": true,
+                    "status": 2,
+                    "verified_by": null
+                },
+                "first_name": {
+                    "required": true,
+                    "status": 1,
+                    "verified_by": null
+                },
+                "last_name": {
+                    "required": true,
+                    "status": 1,
+                    "verified_by": null
+                },
+                "date_of_birth": {
+                    "required": true,
+                    "status": 1,
+                    "verified_by": null
+                },
+                "state": {
+                    "required": false,
+                    "status": 1,
+                    "verified_by": null
+                },
+                "blocked_country": {
+                    "required": true,
+                    "status": 2,
+                    "verified_by": null
+                }
+            },
+            "redeem_count_limit": 99999900
+        },
+        {
+            "limit": 2500000,
+            "count_limit": 1825,
+            "daily_limit": 500000,
+            "daily_count_limit": 5,
+            "monthly_limit": 2500000,
+            "monthly_count_limit": 2500000,
+            "expression": {
+                "personal_number": {
+                    "required": true,
+                    "status": 1,
+                    "verified_by": null
+                }
+            },
+            "redeem_count_limit": 99999900
+        },
+        {
+            "limit": 10000000,
+            "count_limit": 3650,
+            "daily_limit": 1000000,
+            "daily_count_limit": 10,
+            "monthly_limit": 10000000,
+            "monthly_count_limit": 10000000,
+            "expression": {
+                "selfie": {
+                    "required": true,
+                    "status": 1,
+                    "verified_by": null
+                },
+                "id_scan": {
+                    "required": true,
+                    "status": 2,
+                    "verified_by": null
+                }
+            },
+            "redeem_count_limit": 99999900
+        }
+    ]
+}

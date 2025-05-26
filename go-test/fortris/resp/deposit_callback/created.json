@@ -1,0 +1,29 @@
+{
+    "callbackId": "bfe55931-c9a1-3c46-a5e9-af8b4ccfa48a",
+    "callbackType": "DEPOSIT_CREATED",
+    "depositId": "a4cf048b-808f-4aab-8712-231048c29195",
+    "reference": "ref",
+    "requestedAmountInCrypto": {
+        "amount": 0.10,
+        "currency": "USDT"
+    },
+    "network": "ETHEREUM",
+    "cryptoCurrency": "USDT",
+    "fixedExchangeRate": {
+        "rate": 1,
+        "fromCurrency": "USDT",
+        "toCurrency": "USDT",
+        "measuredDate": "2025-03-28T19:08:53.042Z"
+    },
+    "depositState": "CREATED",
+    "receiverAddress": "0x5C0f58d1Fb6815BcFF962578E90a89764B219501",
+    "receivedFunds": [],
+    "totalReceivedAmountInCrypto": {
+        "amount": 0.00,
+        "currency": "USDT"
+    },
+    "totalReceivedAmountInFiat": {
+        "amount": 0.00,
+        "currency": "USD"
+    }
+}

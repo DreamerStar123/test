@@ -1,0 +1,34 @@
+{
+    "callbackId": "00000000-0000-0000-0000-00000000000",
+    "callbackType": "DEPOSIT_CREATION_TIMEOUT",
+    "error": {
+        "details": " Timeout creating deposit"
+    },
+    "depositId": "00000000-0000-0000-0000-00000000000",
+    "reference": "00000000000000",
+    "requestedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    },
+    "requestedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "fixedExchangeRate": {
+        "rate": 1.00000000,
+        "fromCurrency": "USD",
+        "toCurrency": "XBT",
+        "measuredDate": "2020-01-02T03:04:05.123Z"
+    },
+    "depositState": "CREATE_TIMEOUT",
+    "expiryDate": "2020-01-02T03:04:05Z",
+    "receivedFunds": [],
+    "totalReceivedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "totalReceivedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    }
+}

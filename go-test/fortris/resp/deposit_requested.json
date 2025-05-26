@@ -1,0 +1,32 @@
+{
+    "depositId": "acc13b07-7bdb-47c9-a9b6-6af5f3c45d7b",
+    "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+    "callbackUrl": "https://ciphercontent.com/v1/webhooks/fortris",
+    "reference": "ref",
+    "customerId": "7e97f31e-e86f-454a-a2e1-a078c206dc95",
+    "requestedAmountInFiat": {
+        "currency": "",
+        "amount": 0
+    },
+    "requestedAmountInCrypto": {
+        "currency": "USDT",
+        "amount": 0.01
+    },
+    "receiverAddress": "",
+    "verificationSignature": "",
+    "network": "ETHEREUM",
+    "cryptoCurrency": "USDT",
+    "depositState": "REQUESTED",
+    "createdDate": "2025-03-27T07:27:21.539Z",
+    "expiryDate": "",
+    "receiveOrderId": "",
+    "receiveOrderAlphanumericId": "",
+    "fixedExchangeRate": {
+        "rate": 1,
+        "fromCurrency": "USDT",
+        "toCurrency": "USDT",
+        "measuredDate": "2025-03-27T07:27:21.539Z"
+    },
+    "receivedFunds": [],
+    "duplicatedFromDepositId": ""
+}

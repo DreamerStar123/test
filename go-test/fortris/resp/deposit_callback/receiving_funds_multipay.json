@@ -1,0 +1,69 @@
+{
+    "callbackId": "00000000-0000-0000-0000-00000000000",
+    "callbackType": "DEPOSIT_RECEIVING_FUNDS",
+    "depositId": "00000000-0000-0000-0000-00000000000",
+    "reference": "123456",
+    "creditOrderAlphanumericId": "AAAAAA",
+    "requestedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    },
+    "requestedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "fixedExchangeRate": {
+        "rate": 1.00000000,
+        "fromCurrency": "USD",
+        "toCurrency": "XBT",
+        "measuredDate": "2020-01-02T03:04:05.123Z"
+    },
+    "depositState": "RECEIVING_FUNDS",
+    "expiryDate": "2020-01-02T03:04:05.123Z",
+    "receiverAddress": "A11aAAa111A1Aa1aAAa111aaA1A11A1aAaAAA1aaA1Aaa1A11A11A1AAA1A1AaaA",
+    "verificationSignature": "+qITVtPMKczDVFW/v1OiQNUQpHEN239O6+jOQYYUuKLFogItgGVe6EQutEUs41VCRUmzk=",
+    "receivedFunds": [
+        {
+            "txHash": "000000000000000000000000000000000000000000000",
+            "amount": {
+                "amount": 1.00000000,
+                "currency": "XBT"
+            },
+            "createdDate": "2020-01-02T03:04:05Z",
+            "state": "CONFIRMED",
+            "rate": {
+                "rate": 1.00000000,
+                "fromCurrency": "XBT",
+                "toCurrency": "USD",
+                "measuredDate": "2020-01-02T03:04:05Z"
+            },
+            "transactionId": "AAAAAA",
+            "confirmations": 1
+        },
+        {
+            "txHash": "000000000000000000000000000000000000000000000",
+            "amount": {
+                "amount": 1.00000000,
+                "currency": "XBT"
+            },
+            "createdDate": "2020-01-02T03:04:05Z",
+            "state": "UNCONFIRMED",
+            "rate": {
+                "rate": 1.00000000,
+                "fromCurrency": "XBT",
+                "toCurrency": "USD",
+                "measuredDate": "2020-01-02T03:04:05Z"
+            },
+            "transactionId": "AAAAAA",
+            "confirmations": 0
+        }
+    ],
+    "totalReceivedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "totalReceivedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    }
+}

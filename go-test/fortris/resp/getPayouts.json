@@ -1,9 +1,52 @@
 {
     "filters": {
-        "queryDate": "2025-03-12T14:52:07.582Z"
+        "queryDate": "2025-04-09T02:59:21.433Z",
+        "payoutIds": [
+            "6c13f42b-abaf-4b9a-afc5-85cf8be38390"
+        ]
     },
     "results": {
-        "content": [],
+        "content": [
+            {
+                "payoutId": "6c13f42b-abaf-4b9a-afc5-85cf8be38390",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "clientId": "3961e4db-5880-46b7-8ed9-787719305ceb",
+                "callbackUrl": "https://webhook.site/62da4646-d013-45a5-8f6d-30d72cc64477",
+                "reference": "ref",
+                "requestedAmount": {
+                    "amount": 1.000000,
+                    "currency": "USDT"
+                },
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "createdDate": "2025-04-08T14:37:21.239Z",
+                "destinationAddress": "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd",
+                "payoutState": "COMPLETED",
+                "sentFunds": {
+                    "txHash": "0x27b23cfe65328e654a511eb8e76822992fb160c9231046ef026fbed98e9a970e",
+                    "amount": {
+                        "amount": 1.000000,
+                        "currency": "USDT"
+                    },
+                    "fee": {
+                        "amount": 0.000193850733908901,
+                        "currency": "ETH"
+                    },
+                    "createdDate": "2025-04-08T14:37:36Z",
+                    "confirmedDate": "2025-04-08T14:37:36Z",
+                    "state": "CONFIRMED",
+                    "rate": {
+                        "rate": 0.99360061,
+                        "fromCurrency": "USDT",
+                        "toCurrency": "USD",
+                        "measuredDate": "2025-04-08T14:37:36Z"
+                    },
+                    "confirmations": 15,
+                    "transactionId": "d817f793-2f61-4389-b2b3-a5f225ac17a4"
+                },
+                "feePolicy": "SLOW"
+            }
+        ],
         "pageable": {
             "sort": {
                 "empty": true,
@@ -16,8 +59,8 @@
             "paged": true,
             "unpaged": false
         },
-        "totalPages": 0,
-        "totalElements": 0,
+        "totalPages": 1,
+        "totalElements": 1,
         "last": true,
         "size": 20,
         "number": 0,
@@ -26,8 +69,8 @@
             "sorted": false,
             "unsorted": true
         },
-        "numberOfElements": 0,
+        "numberOfElements": 1,
         "first": true,
-        "empty": true
+        "empty": false
     }
 }

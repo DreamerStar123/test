@@ -80,75 +80,86 @@ func sendRequest(method, url, payload string) {
 		return
 	}
 
+	fmt.Println("Request:", apiURL)
+	fmt.Println(payload)
+
 	fmt.Println("Status:", resp.StatusCode)
 	fmt.Println("Response:", string(body))
 }
 
-func authorizePayout(payoutId string, nonce int64) {
-	sendRequest("PUT", fmt.Sprintf("/v3/payouts/%s/authorize", payoutId), fmt.Sprintf(`{
-			"username": "%s",
-			"otpCode": "%s"
-			"nonce": %v,
-		}`,
-		os.Getenv("USERNAME"),
-		os.Getenv("XBT_PASSWORD"),
-		nonce),
+func authorizePayout(payoutId string, otpCode string, currency string) {
+	nonce := time.Now().UnixNano()
+	username := os.Getenv("USDT_USERNAME")
+	if currency == "XBT" {
+		username = os.Getenv("XBT_USERNAME")
+	}
+
+	url := fmt.Sprintf("/v3/payouts/%s/authorize", payoutId)
+	payload := fmt.Sprintf(`{
+		"username": "%s",
+		"otpCode": "%s",
+		"nonce": %v
+	}`,
+		username,
+		otpCode,
+		nonce,
 	)
+	sendRequest("PUT", url, payload)
 }
 
-func getPayouts() {
+func getPayouts(payoutId string) {
 	queryDate := time.Now().UTC().Format("2006-01-02T15:04:05.000Z")
-	url := fmt.Sprintf("/v3/payouts?queryDate=%s", queryDate)
+	url := fmt.Sprintf("/v3/payouts?payoutIds=%s&queryDate=%s", payoutId, queryDate)
 	sendRequest("GET", url, "")
 }
 
-func createPayout(authorize bool, nonce int64, currency string, amount float64, destinationAddress string, network string) {
+func createPayout(authorize bool, otpCode string, currency string, amount float64, destinationAddress string, callbackUrl string) {
+	nonce := time.Now().UnixNano()
+
 	url := fmt.Sprintf("/v3/payouts?authorize=%v", authorize)
+	accountId := accountIdFromCurrency(currency)
 	payload := ""
+
 	if currency == "XBT" {
+		payload = fmt.Sprintf(`{
+			"username": "%s",
+			"accountId": "%s",
+			"reference": "ref",
+			"callbackUrl": "%s",
+			"requestedAmount": {
+				"currency": "%s",
+				"amount": %v
+			},
+			"destinationAddress": "%s",
+			"verifyBalance": true,
+			"feePolicy": "SLOW",
+			"nonce": %v
+		}`, os.Getenv("XBT_USERNAME"), accountId, callbackUrl, currency, amount, destinationAddress, nonce)
+	} else {
 		payload = fmt.Sprintf(`{
 			"username": "%s",
 			"otpCode": "%s",
 			"accountId": "%s",
 			"reference": "ref",
-			"callbackUrl": "https://psp.stg.01123581.com",
+			"callbackUrl": "%s",
 			"requestedAmount": {
 				"currency": "%s",
 				"amount": %v
 			},
 			"destinationAddress": "%s",
-			"network": "%s",
-			"verifyBalance": true,
-			"feePolicy": "SLOW",
-			"subtractFee": true,
-			"useCoinConsolidation": true,
-			"nonce": %v
-		}`, os.Getenv("XBT_USERNAME"), os.Getenv("OTP_CODE"), os.Getenv("XBT_ACCOUNT_ID"), currency, amount, destinationAddress, network, nonce)
-	} else {
-		payload = fmt.Sprintf(`{
-			"username": "%s",
-			"accountId": "%s",
-			"reference": "ref",
-			"callbackUrl": "https://psp.stg.01123581.com",
-			"requestedAmount": {
-				"currency": "%s",
-				"amount": %v
-			},
-			"destinationAddress": "%s",
-			"network": "%s",
 			"verifyBalance": true,
 			"feePolicy": "SLOW",
 			"nonce": %v
-		}`, os.Getenv("USDT_USERNAME"), os.Getenv("USDT_ACCOUNT_ID"), currency, amount, destinationAddress, network, nonce)
+		}`, os.Getenv("USDT_USERNAME"), otpCode, accountId, callbackUrl, currency, amount, destinationAddress, nonce)
 	}
-
-	println(payload)
 
 	sendRequest("POST", url, payload)
 }
 
 func doVoidPayout(payoutId string) {
-	sendRequest("DELETE", fmt.Sprintf("/v3/payouts/%s?nonce=%d", payoutId, 1009), "")
+	nonce := time.Now().UnixNano()
+
+	sendRequest("DELETE", fmt.Sprintf("/v3/payouts/%s?nonce=%d", payoutId, nonce), "")
 }
 
 func getDeposits(depositId string) {
@@ -157,32 +168,51 @@ func getDeposits(depositId string) {
 	sendRequest("GET", url, "")
 }
 
-func createDeposit(nonce int64, currency string, amount float64) {
-	url := "/v3/deposits"
+func accountIdFromCurrency(currency string) string {
 	accountId := ""
-	if currency == "XBT" {
+	switch currency {
+	case "XBT":
 		accountId = os.Getenv("XBT_ACCOUNT_ID")
-	} else {
+	case "USDT":
 		accountId = os.Getenv("USDT_ACCOUNT_ID")
+	case "USDC":
+		accountId = os.Getenv("USDC_ACCOUNT_ID")
+	case "LTC":
+		accountId = os.Getenv("LTC_ACCOUNT_ID")
+	case "BNB":
+		accountId = os.Getenv("BNB_ACCOUNT_ID")
+	case "ETH":
+		accountId = os.Getenv("ETH_ACCOUNT_ID")
+	default:
+		fmt.Printf("invalid currency %s", currency)
 	}
+	return accountId
+}
+
+func createDeposit(currency string, amount float64, callbackUrl string) {
+	nonce := time.Now().UnixNano()
+
+	url := "/v3/deposits"
 	payload := fmt.Sprintf(`{
 		"accountId": "%s",
 		"reference": "ref",
-		"callbackUrl": "https://psp.stg.01123581.com",
+		"callbackUrl": "%s",
+		"network": "ETHEREUM",
 		"requestedAmount": {
 			"currency": "%s",
 			"amount": %v
 		},
 		"nonce": %v
-	}`, accountId, currency, amount, nonce)
-
-	println(payload)
+	}`, accountIdFromCurrency(currency), callbackUrl, currency, amount, nonce)
 
 	sendRequest("POST", url, payload)
 }
 
-func doVoidDeposit(depositId string, nonce int64) {
-	sendRequest("DELETE", fmt.Sprintf("/v3/deposits/%s?nonce=%d", depositId, nonce), "")
+func doVoidDeposit(depositId string) {
+	nonce := time.Now().UnixNano()
+
+	url := fmt.Sprintf("/v3/deposits/%s?nonce=%d", depositId, nonce)
+	sendRequest("DELETE", url, "")
 }
 
 func getAccountsBalance_1() {
@@ -203,7 +233,7 @@ func getAccountBalance(accountId string) {
 }
 
 func main() {
-	// nonce := int64(1101)
+	const callbackUrl = "https://webhook.site/5a363dcc-e44d-4b86-bd66-5256e11202a0"
 
 	// Load environment variables from .env file
 	err := godotenv.Load()
@@ -211,19 +241,22 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	// authorizePayout(os.Getenv("XBT_PAYOUT_ID"))
-	// getPayouts()
-	// createPayout(false, nonce, "XBT", 1, "1BvBMSEYstWetqTFn5Au4m4GFyFei9PT7Z", "BITCOIN")
-	// createPayout(false, nonce, "USDT", 0.1, "0xB5A2e8C0F3c7D6E9b1C4D5F7A8eF0A6C9F4C2E3D", "ETHEREUM")
+	// authorizePayout("d9ffbc61-ced2-4b1a-97bb-6d2c4eae4033", "569168", "XBT")
+	// getPayouts("120798e3-aef7-4a45-bbee-971be48eb970")
+	// createPayout(false, "951661", "XBT", 0.00001, "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c", callbackUrl)
+	// createPayout(true, "145713", "USDT", 1, "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd", callbackUrl)
 	// doVoidPayout("")
 
-	// getDeposits("3a5375a0-a4ee-4064-b3eb-afe7779e5909")
-	getDeposits("fe090e04-8ec3-43ef-8e44-a23fd3d27658")
-	// createDeposit(nonce, "XBT", 1)
-	// createDeposit(nonce, "USDT", 0.1)
-	// doVoidDeposit("7fb18232-564c-4846-bc31-210d600f5344", nonce)
+	// getDeposits("facab3ea-2a95-4a36-9d00-1d58e573e2f4")
+	// createDeposit("XBT", 0.00002, callbackUrl)
+	createDeposit("USDT", 0.01, callbackUrl)
+	// createDeposit("ETH", 1, callbackUrl)
+	// createDeposit("BNB", 1, callbackUrl)
+	// createDeposit("LTC", 1, callbackUrl)
+	// createDeposit("USDC", 1, callbackUrl)
+	// doVoidDeposit("8aec39ba-9bdf-4492-8c38-b2bf38477754", nonce)
 
-	// getAccountsBalance_1()
 	// getAccountBalance(os.Getenv("XBT_ACCOUNT_ID"))
 	// getAccountBalance(os.Getenv("USDT_ACCOUNT_ID"))
+	// getAccountBalance(os.Getenv("BNB_ACCOUNT_ID"))
 }

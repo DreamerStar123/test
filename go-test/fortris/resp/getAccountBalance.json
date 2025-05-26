@@ -1,57 +1,57 @@
 {
     "accountBalanceFilters": {
         "accountIds": [
-            "bfc55973-7cec-4173-803a-47d107ef2af0"
+            "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf"
         ],
-        "queryDate": "2025-03-11T04:11:51.082Z"
+        "queryDate": "2025-03-30T13:35:00.001Z"
     },
     "balances": [
         {
-            "accountId": "bfc55973-7cec-4173-803a-47d107ef2af0",
+            "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
             "fundsCanBeSpent": true,
-            "cryptoCurrency": "XBT",
-            "network": "BITCOIN",
+            "cryptoCurrency": "USDT",
+            "network": "ETHEREUM",
             "cryptoBalance": {
                 "total": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 4.37,
+                    "currency": "USDT"
                 },
                 "available": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 4.37,
+                    "currency": "USDT"
                 },
                 "confirmed": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 4.37,
+                    "currency": "USDT"
                 },
                 "locked": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 0.00,
+                    "currency": "USDT"
                 },
                 "unconfirmedReceived": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 0.00,
+                    "currency": "USDT"
                 },
                 "sentUnconfirmed": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 0.00,
+                    "currency": "USDT"
                 },
                 "selfUnconfirmedReceived": {
-                    "amount": 0.00000000,
-                    "currency": "XBT"
+                    "amount": 0.00,
+                    "currency": "USDT"
                 }
             },
             "fiatBalance": {
                 "total": {
-                    "amount": 0.00,
+                    "amount": 4.46,
                     "currency": "USD"
                 },
                 "available": {
-                    "amount": 0.00,
+                    "amount": 4.46,
                     "currency": "USD"
                 },
                 "confirmed": {
-                    "amount": 0.00,
+                    "amount": 4.46,
                     "currency": "USD"
                 },
                 "locked": {
@@ -72,10 +72,10 @@
                 }
             },
             "exchangeRate": {
-                "rate": 79744.82,
-                "fromCurrency": "XBT",
+                "rate": 1.02,
+                "fromCurrency": "USDT",
                 "toCurrency": "USD",
-                "measuredDate": "2025-03-11T04:09:52.252370673Z"
+                "measuredDate": "2025-03-30T13:33:53.087472396Z"
             }
         }
     ]

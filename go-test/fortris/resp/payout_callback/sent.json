@@ -1,0 +1,55 @@
+{
+    "callbackId": "00000000-0000-0000-0000-00000000000",
+    "callbackType": "PAYOUT_SENT",
+    "payoutId": "00000000-0000-0000-0000-00000000000",
+    "reference": "00000000000000",
+    "debitOrderAlphanumericId": "AAAAAA",
+    "requestedAmount": {
+        "amount": 1.00,
+        "currency": "USD"
+    },
+    "payoutState": "SENT",
+    "destinationAddress": "A11aAAa111A1Aa1aAAa111aaA1A11A1aAaAAA1aaA1Aaa1A11A11A1AAA1A1AaaA",
+    "destinationAccountId": "00000000-0000-0000-0000-00000000000",
+    "sentFunds": {
+        "txHash": "000000000000000000000000000000000000000000000",
+        "amount": {
+            "amount": 1.00000000,
+            "currency": "XBT"
+        },
+        "fee": {
+            "amount": 1.00000000,
+            "currency": "XBT"
+        },
+        "createdDate": "2020-01-02T03:04:05Z",
+        "state": "UNCONFIRMED",
+        "rate": {
+            "rate": 1.00000000,
+            "fromCurrency": "XBT",
+            "toCurrency": "USD",
+            "measuredDate": "2020-01-02T03:04:05Z"
+        },
+        "transactionId": "AAAAAA",
+        "confirmations": 0
+    },
+    "authorization": {
+        "id": "00000000-0000-0000-0000-00000000000",
+        "state": "FULLY_AUTHORIZED",
+        "cosignerAuthorizations": [
+            {
+                "state": "AUTHORIZED",
+                "userGroupName": "us.authorizers.psp",
+                "username": "automation000.test",
+                "expire": "2020-01-02T03:04:05.123Z"
+            }
+        ]
+    },
+    "feePolicy": "NORMAL",
+    "subtractFee": false,
+    "useCoinConsolidation": true,
+    "batchingAllowed": false,
+    "orderCodeName": "PAYOUT",
+    "generalLedgerName": "General Ledger Name",
+    "generalLedgerProject": "General Ledger Project",
+    "generalLedgerDistribution": "General Ledger Distribution"
+}

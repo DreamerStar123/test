@@ -1,6 +1,7 @@
 package pepay
 
 import (
+	"encoding/json"
 	"fmt"
 	"testing"
 )
@@ -21,7 +22,7 @@ func TestCreateDeposit(t *testing.T) {
 		depoId, err := c.Deposit.Create(in)
 		println(depoId)
 		if err != nil {
-			t.Errorf("got = %v", err)
+			t.Error(err)
 		}
 	})
 }
@@ -29,8 +30,9 @@ func TestCreateDeposit(t *testing.T) {
 func TestRetrieveDeposit(t *testing.T) {
 	t.Run("retrieve", func(t *testing.T) {
 		c := NewFakeClient(t, nil)
-		depo, err := c.Deposit.Retrieve("3a5375a0-a4ee-4064-b3eb-afe7779e5909")
-		fmt.Printf("%v", depo)
+		depo, err := c.Deposit.Retrieve("b5f4d9b0-6f1d-4c1c-849e-1d7058751635")
+		content, err := json.Marshal(depo)
+		fmt.Printf("%s", content)
 		if err != nil {
 			t.Errorf("got = %v", err)
 		}

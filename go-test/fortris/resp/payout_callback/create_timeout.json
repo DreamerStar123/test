@@ -1,0 +1,23 @@
+{
+    "callbackId": "00000000-0000-0000-0000-00000000000",
+    "callbackType": "PAYOUT_CREATION_TIMEOUT",
+    "error": {
+        "details": "Timeout creating payout"
+    },
+    "payoutId": "00000000-0000-0000-0000-00000000000",
+    "reference": "00000000000000",
+    "requestedAmount": {
+        "amount": 1.00,
+        "currency": "USD"
+    },
+    "payoutState": "CREATE_TIMEOUT",
+    "destinationAddress": "A11aAAa111A1Aa1aAAa111aaA1A11A1aAaAAA1aaA1Aaa1A11A11A1AAA1A1AaaA",
+    "feePolicy": "NORMAL",
+    "subtractFee": false,
+    "useCoinConsolidation": true,
+    "batchingAllowed": false,
+    "orderCodeName": "PAYOUT",
+    "generalLedgerName": "General Ledger Name",
+    "generalLedgerProject": "General Ledger Project",
+    "generalLedgerDistribution": "General Ledger Distribution"
+}

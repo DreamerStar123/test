@@ -1,0 +1,34 @@
+{
+    "callbackId": "00000000-0000-0000-0000-00000000000",
+    "callbackType": "DEPOSIT_EXPIRED",
+    "depositId": "00000000-0000-0000-0000-00000000000",
+    "reference": "00000000000000",
+    "creditOrderAlphanumericId": "AAAAAA",
+    "requestedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    },
+    "requestedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "fixedExchangeRate": {
+        "rate": 1.00000000,
+        "fromCurrency": "USD",
+        "toCurrency": "XBT",
+        "measuredDate": "2020-01-02T03:04:05.123Z"
+    },
+    "depositState": "VOID",
+    "expiryDate": "2020-01-02T03:04:05.123Z",
+    "receiverAddress": "A11aAAa111A1Aa1aAAa111aaA1A11A1aAaAAA1aaA1Aaa1A11A11A1AAA1A1AaaA",
+    "verificationSignature": "+qITVtPMKczDVFW/v1OiQNUQpHEN239O6+jOQYYUuKLFogItgGVe6EQutEUs41VCRUmzk=",
+    "receivedFunds": [],
+    "totalReceivedAmountInCrypto": {
+        "amount": 1.00000000,
+        "currency": "XBT"
+    },
+    "totalReceivedAmountInFiat": {
+        "amount": 1.00,
+        "currency": "USD"
+    }
+}

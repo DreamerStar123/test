@@ -1,12 +1,195 @@
 {
     "filters": {
-        "queryDate": "2025-03-11T19:24:17.376Z",
-        "depositIds": [
-            "dbc2b261-a1bb-4f7f-8abc-9d17d23c72e1"
-        ]
+        "queryDate": "2025-04-03T12:43:09.310Z",
+        "depositIds": []
     },
     "results": {
         "content": [
+            {
+                "depositId": "7fb18232-564c-4846-bc31-210d600f5344",
+                "accountId": "9db3eb0a-53e4-4bcf-8e3d-8e3a2bdced09",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00000000,
+                    "currency": "XBT"
+                },
+                "receiverAddress": "bc1qkpj68jrwd0y7hdqv225jv3t3rkp7h2jvvuagdrum09z8thtpqalqhnuh98",
+                "verificationSignature": "XhUVutFbusScFdxk3lwlzwFfJMn7SHoVOCKpvFtXDurcARIXI/+AJDwbtifCX544JIDlW47flyPP4Do7aOaUy77txS01xTDG451QmuQw8lqqa6BllMHaW42k1MIxHUeamPeYdCJnJCxuNGlo7ErgG4YgrJ6fOLA+1T+QBRlwojY=",
+                "network": "BITCOIN",
+                "cryptoCurrency": "XBT",
+                "depositState": "VOID",
+                "createdDate": "2025-03-10T05:51:58.455Z",
+                "receiveOrderId": "579b3ff8-8581-474f-a2ec-8264e46b0d36",
+                "receiveOrderAlphanumericId": "7TGPXQ",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "XBT",
+                    "toCurrency": "XBT",
+                    "measuredDate": "2025-03-10T05:51:58.455Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "4f4312df-9c61-488d-a593-95aeeac05abd",
+                "accountId": "9db3eb0a-53e4-4bcf-8e3d-8e3a2bdced09",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1000.00000000,
+                    "currency": "XBT"
+                },
+                "receiverAddress": "bc1q3axmjqnkvxt95lz4vtcanxj7q2skdx3ehlvgqs27pq4ftv2va9rs2g32wm",
+                "verificationSignature": "DbH9RC3wtTbEhejN1u5i9S1B3MAMmxIcGMV+MSxUIb/+av2d1rG8MvLa2uNqXHYg6svuP1j0SuQwcqFTNtnCkFfJpDj4NrBRDF3F7R7gvuwGXqDmSQh8kXvXv8AE6vaxFbLdRBW398cVeIyGagH/6XI0YicW6H5/8ur8EVpLR0U=",
+                "network": "BITCOIN",
+                "cryptoCurrency": "XBT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-10T05:53:29.030Z",
+                "receiveOrderId": "39e5357c-53bb-41c8-90fa-8b6e0a3e0b75",
+                "receiveOrderAlphanumericId": "EAHPGI",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "XBT",
+                    "toCurrency": "XBT",
+                    "measuredDate": "2025-03-10T05:53:29.030Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "90b9dd04-c755-49ab-989f-4c6388e9637b",
+                "accountId": "9db3eb0a-53e4-4bcf-8e3d-8e3a2bdced09",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1000.00000000,
+                    "currency": "XBT"
+                },
+                "receiverAddress": "bc1qzqtnh006w4pxd6qrxj46vdwnvcew7t206jz86f7lu2vp6vzj98kqnsk8qm",
+                "verificationSignature": "MiUC+Dw2eT2jc43gTjPAQFViJLI0TQdtO9Q9eX9WOwhUly5q/SOczYgJdectnRlSc8IPSZ9VNCpZpOWBXmzBjwvet65Z2BhOYrV8V4jf3/f/mpRJe3QBUWJPdTHeNOvYat3jlhiwmSav7XwvE21h5ix+1IjjVwigIPoA2YYSR0I=",
+                "network": "BITCOIN",
+                "cryptoCurrency": "XBT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-10T06:13:38.149Z",
+                "receiveOrderId": "ef989c55-f83b-4e6c-8c20-700618493f0b",
+                "receiveOrderAlphanumericId": "YE8TMT",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "XBT",
+                    "toCurrency": "XBT",
+                    "measuredDate": "2025-03-10T06:13:38.149Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "768641d4-9aed-4d29-922e-daea05ced2e8",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x0F7C93147Eac47b7A8A40cf576417C052be7356d",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-10T17:42:08.934Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-10T17:42:08.934Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "e4c54c29-2e1c-4ece-988e-482fb30e8a34",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0xC5f2bbb39219bFa92499fd9931fFb740e88d5228",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-11T13:24:52.236Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-11T13:24:52.236Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "c2ad055d-b164-4fbe-957e-22d0d0fb1bf0",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x1752Bb3D780F9CC213BEBa940d09e81A1f1c9e35",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-11T14:41:19.907Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-11T14:41:19.907Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "340e9e72-9756-4cf3-b110-aeebb80bf0dc",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x9Ee5F39a298d8fFCD9ff26ba90f0245c0efe4aAC",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-11T15:35:07.926Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-11T15:35:07.926Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "0d02fd8b-9b89-4470-b6b2-faf92e2de199",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x5137d008F206f1402eabB4C8Ba0933baa766a0A0",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-11T19:16:09.834Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-11T19:16:09.834Z"
+                },
+                "receivedFunds": []
+            },
             {
                 "depositId": "dbc2b261-a1bb-4f7f-8abc-9d17d23c72e1",
                 "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
@@ -28,6 +211,271 @@
                     "measuredDate": "2025-03-11T19:17:14.484Z"
                 },
                 "receivedFunds": []
+            },
+            {
+                "depositId": "3a5375a0-a4ee-4064-b3eb-afe7779e5909",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 0.10,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0xC6B9D0260F6d02D2E011BC15A1A114B5E5a96f07",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "COMPLETED",
+                "createdDate": "2025-03-12T04:11:04.686Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T04:11:04.685Z"
+                },
+                "receivedFunds": [
+                    {
+                        "txHash": "0x23c557ced573a817bf8c0c5317b5a816f5fd5cad381f81523e80ea9fa24be2c8",
+                        "amount": {
+                            "amount": 0.100000000000000000,
+                            "currency": "ETH"
+                        },
+                        "fee": {
+                            "amount": 0.000031857061467000,
+                            "currency": "ETH"
+                        },
+                        "createdDate": "2025-03-12T04:13:00Z",
+                        "confirmedDate": "2025-03-12T04:13:00Z",
+                        "state": "CONFIRMED",
+                        "rate": {
+                            "rate": 1884.99815319,
+                            "fromCurrency": "ETH",
+                            "toCurrency": "USD",
+                            "measuredDate": "2025-03-12T04:13:00Z"
+                        },
+                        "transactionId": "93020109-3aaa-4a6d-b06c-c7e7f56059b6",
+                        "confirmations": 15
+                    }
+                ]
+            },
+            {
+                "depositId": "a44c9fd2-db98-4b96-b46b-99923bf4dfb8",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x654Bc0B79F6857C48105FA51a435d317D036382e",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-12T13:23:53.846Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T13:23:53.846Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "466e6173-d266-4199-b79e-9a6cd46c71d8",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0xCe51A45C015b1C84B6EC64a62342721266d3aa8C",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-12T13:25:10.497Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T13:25:10.497Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "38da64e7-5082-4758-8133-3e5c45167f2b",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x843f1cF89E024D9a8831cb317D2c1d65Ab3Ef4B1",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-12T13:29:05.270Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T13:29:05.270Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "ad98d1a7-481d-4c48-a1cb-ccb7717f232d",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0xF6D8Ba722013c10f7d457d458021f234C6E1800B",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-12T14:20:46.012Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T14:20:46.012Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "b2ea4cf3-bcf6-42d4-8fbc-3ec07c3ab814",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x99bfA4e2ce1b3a5eF119ed0A20e2aB73239205C9",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-12T14:50:37.454Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-12T14:50:37.454Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "db86c4e5-2f20-4ad4-8514-ef14b0cdc3e1",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x741c39853fb34e38b87071E7284B99FF91A187E0",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-13T23:43:14.880Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-13T23:43:14.880Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "a963878d-55a4-420b-98cc-8d507a23e514",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x20cE250D9DEdE3c387B87627d5fACD0becd25bfe",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-13T23:43:34.178Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-13T23:43:34.178Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "704a30ee-860b-4af2-971c-5312f7c817a1",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x805423A5c074A1bc583ada2ed9b9a9adFA449554",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-13T23:43:49.374Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-13T23:43:49.374Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "97a8c24d-6cc4-4327-8cc0-0537b29e5048",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x20808b858FEF98f14d8a6FfA094463fD44e74565",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-17T22:19:32.980Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-17T22:19:32.980Z"
+                },
+                "receivedFunds": []
+            },
+            {
+                "depositId": "a78ffeea-f15e-41a8-9734-39765066bd11",
+                "accountId": "f8620c81-d75d-4eff-b2ab-1cb785fbbaaf",
+                "callbackUrl": "https://psp.stg.01123581.com",
+                "reference": "ref",
+                "requestedAmountInCrypto": {
+                    "amount": 1.00,
+                    "currency": "USDT"
+                },
+                "receiverAddress": "0x9b6D2867d636D670A53f33FF326b0381505BEa97",
+                "network": "ETHEREUM",
+                "cryptoCurrency": "USDT",
+                "depositState": "CREATED",
+                "createdDate": "2025-03-17T22:20:00.366Z",
+                "fixedExchangeRate": {
+                    "rate": 1,
+                    "fromCurrency": "USDT",
+                    "toCurrency": "USDT",
+                    "measuredDate": "2025-03-17T22:20:00.366Z"
+                },
+                "receivedFunds": []
             }
         ],
         "pageable": {
@@ -42,9 +490,9 @@
             "paged": true,
             "unpaged": false
         },
-        "totalPages": 1,
-        "totalElements": 1,
         "last": true,
+        "totalPages": 1,
+        "totalElements": 20,
         "size": 20,
         "number": 0,
         "sort": {
@@ -52,8 +500,8 @@
             "sorted": false,
             "unsorted": true
         },
-        "numberOfElements": 1,
         "first": true,
+        "numberOfElements": 20,
         "empty": false
     }
 }
