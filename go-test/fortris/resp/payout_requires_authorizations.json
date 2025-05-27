@@ -1,0 +1,33 @@
+{
+    "callbackId": "9919021c-a801-330a-846c-edbd86f512a1",
+    "callbackType": "PAYOUT_REQUIRES_AUTHORIZATIONS",
+    "payoutId": "cc8b0139-2100-4783-a420-fd09674a4764",
+    "reference": "ref",
+    "debitOrderAlphanumericId": "JEKZED",
+    "requestedAmount": 
+    {
+        "amount": 0.0000329,
+        "currency": "XBT"
+    },
+    "network": "BITCOIN",
+    "cryptoCurrency": "XBT",
+    "payoutState": "COSIGNER_AUTHORIZATIONS_PENDING",
+    "destinationAddress": "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c",
+    "authorization": 
+    {
+        "id": "67465856-f3bb-4125-a094-052360dc2183",
+        "state": "PENDING",
+        "cosignerAuthorizations": 
+        [
+            {
+                "state": "AUTHORIZING",
+                "userGroupName": "Nucleus.PSP",
+                "username": "nucleus_admin"
+            }
+        ]
+    },
+    "feePolicy": "SLOW",
+    "useCoinConsolidation": true,
+    "orderCodeName": "PAYOUT",
+    "batchingAllowed": false
+}

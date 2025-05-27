@@ -1,0 +1,60 @@
+{
+    "callbackId": "5ac60fc9-8edc-3054-af16-88d875b53f3b",
+    "callbackType": "PAYOUT_COMPLETED",
+    "payoutId": "cc8b0139-2100-4783-a420-fd09674a4764",
+    "reference": "ref",
+    "debitOrderAlphanumericId": "JEKZED",
+    "requestedAmount": 
+    {
+        "amount": 0.0000329,
+        "currency": "XBT"
+    },
+    "network": "BITCOIN",
+    "cryptoCurrency": "XBT",
+    "payoutState": "COMPLETED",
+    "destinationAddress": "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c",
+    "sentFunds": 
+    {
+        "txHash": "5508fa9d7f91424eb87f9b6ccc62c32f427f15c2595bee452f1a27bc3bbe53e4",
+        "amount": 
+        {
+            "amount": 0.0000329,
+            "currency": "XBT"
+        },
+        "fee": 
+        {
+            "amount": 0.00000263,
+            "currency": "XBT"
+        },
+        "createdDate": "2025-05-27T02:56:51Z",
+        "confirmedDate": "2025-05-27T03:11:43Z",
+        "state": "CONFIRMED",
+        "rate": 
+        {
+            "rate": 108210.30401599,
+            "fromCurrency": "XBT",
+            "toCurrency": "XBT",
+            "measuredDate": "2025-05-27T02:56:51Z"
+        },
+        "confirmations": 6,
+        "transactionId": "3I331H"
+    },
+    "authorization": 
+    {
+        "id": "67465856-f3bb-4125-a094-052360dc2183",
+        "state": "FULLY_AUTHORIZED",
+        "cosignerAuthorizations": 
+        [
+            {
+                "state": "AUTHORIZED",
+                "userGroupName": "Nucleus.PSP",
+                "username": "nucleus_admin",
+                "expire": "2025-05-30T02:56:45.107Z"
+            }
+        ]
+    },
+    "feePolicy": "SLOW",
+    "useCoinConsolidation": true,
+    "orderCodeName": "PAYOUT",
+    "batchingAllowed": false
+}

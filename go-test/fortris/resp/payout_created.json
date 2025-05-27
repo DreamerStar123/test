@@ -1,0 +1,20 @@
+{
+    "callbackId": "7108d7c1-8485-3496-974d-f3f7097a147b",
+    "callbackType": "PAYOUT_CREATED",
+    "payoutId": "cc8b0139-2100-4783-a420-fd09674a4764",
+    "reference": "ref",
+    "debitOrderAlphanumericId": "JEKZED",
+    "requestedAmount": 
+    {
+        "amount": 0.0000329,
+        "currency": "XBT"
+    },
+    "network": "BITCOIN",
+    "cryptoCurrency": "XBT",
+    "payoutState": "CREATED",
+    "destinationAddress": "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c",
+    "feePolicy": "SLOW",
+    "useCoinConsolidation": true,
+    "orderCodeName": "PAYOUT",
+    "batchingAllowed": false
+}
