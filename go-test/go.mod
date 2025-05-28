@@ -14,7 +14,11 @@ require (
 	golang.org/x/tour v0.1.0
 )
 
-require filippo.io/edwards25519 v1.1.0 // indirect
+require (
+	filippo.io/edwards25519 v1.1.0 // indirect
+	github.com/SebastiaanKlippert/go-wkhtmltopdf v1.9.3 // indirect
+	github.com/jung-kurt/gofpdf v1.16.2 // indirect
+)
 
 require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
