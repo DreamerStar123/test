@@ -17,6 +17,8 @@ require (
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/SebastiaanKlippert/go-wkhtmltopdf v1.9.3 // indirect
+	github.com/btcsuite/btcd v0.20.1-beta // indirect
+	github.com/btcsuite/btcutil v1.0.2 // indirect
 	github.com/jung-kurt/gofpdf v1.16.2 // indirect
 	golang.org/x/text v0.25.0 // indirect
 )

@@ -75,5 +75,7 @@ func checkEthereum(api_key, addr string) {
 func main() {
 	// checkBitcoin("bc1q5g9f3qhjxlw7m9u0s0y43g755paw274pevk7sx")
 
-	checkEthereum("6860b637cfd221d0f33db6a2c8fac325950f1cf010138f306555f903d80cada7", "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd")
+	// checkEthereum("6860b637cfd221d0f33db6a2c8fac325950f1cf010138f306555f903d80cada7", "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd")
+
+	// _, err := addrutil.DecodeAddress("LZb1bQ5L6G3Z...y7h3", &addrutil.MainNetParams)
 }
