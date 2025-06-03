@@ -47,6 +47,7 @@ require (
 	github.com/supranational/blst v0.3.14 // indirect
 	github.com/tklauser/go-sysconf v0.3.12 // indirect
 	github.com/tklauser/numcpus v0.6.1 // indirect
+	golang.org/x/oauth2 v0.30.0
 	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
