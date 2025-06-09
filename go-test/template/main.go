@@ -10,13 +10,13 @@ import (
 )
 
 type ExportTrans struct {
-	ID        string
-	Date      string
-	Time      string
-	TransType string
-	Reference string
-	Amount    float64
-	Balance   float64
+	Date        string
+	Time        string
+	Description string
+	Reference   string
+	Sign        bool
+	Amount      float64
+	Balance     float64
 }
 
 type PageData struct {
@@ -53,13 +53,13 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		MoneyOut:       2543.21,
 		Trans: []ExportTrans{
 			{
-				ID:        "d80f2351-d0b5-4cc8-af85-728d47249fee",
-				Date:      "3rd Feb 2025",
-				Time:      "20:12:20",
-				TransType: "Deposit",
-				Reference: "",
-				Amount:    16.24,
-				Balance:   3954.53,
+				Date:        "3rd Feb 2025",
+				Time:        "20:12:20",
+				Description: "Deposit",
+				Reference:   "d80f2351",
+				Sign:        false,
+				Amount:      16.24,
+				Balance:     3954.53,
 			},
 		},
 	})
@@ -73,8 +73,16 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	pdf.MarginLeft.Set(0)
+	pdf.MarginRight.Set(0)
+	pdf.MarginTop.Set(0)
+	pdf.MarginBottom.Set(0)
+
 	// page := wkhtmltopdf.NewPage("https://godoc.org/github.com/SebastiaanKlippert/go-wkhtmltopdf")
 	page := wkhtmltopdf.NewPageReader(bytes.NewReader(buf.Bytes()))
+	page.FooterCenter.Set("page number")
+	page.FooterFontSize.Set(10)
+	page.FooterSpacing.Set(5)
 	pdf.AddPage(page)
 
 	err = pdf.Create()
