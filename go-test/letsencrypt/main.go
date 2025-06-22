@@ -1,35 +1,27 @@
 package main
 
 import (
-	"log"
 	"net/http"
-
-	"golang.org/x/crypto/acme/autocert"
 )
 
 func main() {
-	m := http.NewServeMux()
-	m.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello, HTTPS with Let's Encrypt!"))
-	})
+	// Load your certificate and key files
+	certFile := "server.crt" // Path to your certificate file
+	keyFile := "server.key"  // Path to your private key file
 
-	// Set up the autocert manager
-	certManager := autocert.Manager{
-		Prompt:     autocert.AcceptTOS,
-		HostPolicy: autocert.HostWhitelist("testsslcert.com"), // Use your domain
-		Cache:      autocert.DirCache("certs"),                // Directory for storing certificates
-	}
-
-	// Create an HTTPS server
 	server := &http.Server{
-		Addr:      ":443",
-		Handler:   m,
-		TLSConfig: certManager.TLSConfig(),
+		Addr: ":443",
+		Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.Write([]byte("Hello, HTTPS with manual cert!"))
+		}),
 	}
 
-	// Start the server
-	log.Println("Starting server on :443...")
-	if err := server.ListenAndServeTLS("", ""); err != nil {
-		log.Fatalf("ListenAndServeTLS failed: %v", err)
-	}
+	// Optionally, redirect HTTP to HTTPS
+	go func() {
+		http.ListenAndServe(":80", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			http.Redirect(w, r, "https://"+r.Host+r.RequestURI, http.StatusMovedPermanently)
+		}))
+	}()
+
+	server.ListenAndServeTLS(certFile, keyFile)
 }
