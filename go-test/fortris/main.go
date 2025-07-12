@@ -123,7 +123,6 @@ func createPayout(authorize bool, otpCode string, currency string, amount float6
 	if currency == "XBT" {
 		payload = fmt.Sprintf(`{
 			"username": "%s",
-			"otpCode": "%s",
 			"accountId": "%s",
 			"reference": "ref",
 			"callbackUrl": "%s",
@@ -135,7 +134,7 @@ func createPayout(authorize bool, otpCode string, currency string, amount float6
 			"verifyBalance": true,
 			"feePolicy": "SLOW",
 			"nonce": %v
-		}`, os.Getenv("XBT_USERNAME"), otpCode, accountId, callbackUrl, currency, amount, destinationAddress, nonce)
+		}`, os.Getenv("XBT_USERNAME"), accountId, callbackUrl, currency, amount, destinationAddress, nonce)
 	} else {
 		payload = fmt.Sprintf(`{
 			"username": "%s",
@@ -234,7 +233,7 @@ func getAccountBalance(accountId string) {
 }
 
 func main() {
-	const callbackUrl = "https://webhook.site/3a5a0b08-6650-41a4-a4cd-8591ff75aa7f"
+	const callbackUrl = "https://webhook.site/befac219-ad84-40a1-9159-01abfc53c89c"
 
 	// Load environment variables from .env file
 	err := godotenv.Load()
@@ -244,11 +243,11 @@ func main() {
 
 	// authorizePayout("d9ffbc61-ced2-4b1a-97bb-6d2c4eae4033", "569168", "XBT")
 	// getPayouts("120798e3-aef7-4a45-bbee-971be48eb970")
-	// createPayout(true, "327932", "XBT", 0.0000329, "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c", callbackUrl)
-	// createPayout(true, "145713", "USDT", 1, "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd", callbackUrl)
+	// createPayout(false, "327932", "XBT", 0.0000329, "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c", callbackUrl)
+	// createPayout(false, "145713", "USDT", 1, "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd", callbackUrl)
 	// doVoidPayout("")
 
-	// getDeposits("facab3ea-2a95-4a36-9d00-1d58e573e2f4")
+	getDeposits("cd06b124-74f8-42c7-aa8b-6f17ce559b24")
 	// createDeposit("XBT", 0.00002, callbackUrl)
 	// createDeposit("USDT", 0.01, callbackUrl)
 	// createDeposit("ETH", 1, callbackUrl)
@@ -257,7 +256,7 @@ func main() {
 	// createDeposit("USDC", 1, callbackUrl)
 	// doVoidDeposit("8aec39ba-9bdf-4492-8c38-b2bf38477754", nonce)
 
-	getAccountBalance(os.Getenv("XBT_ACCOUNT_ID"))
+	// getAccountBalance(os.Getenv("XBT_ACCOUNT_ID"))
 	// getAccountBalance(os.Getenv("USDT_ACCOUNT_ID"))
 	// getAccountBalance(os.Getenv("BNB_ACCOUNT_ID"))
 }

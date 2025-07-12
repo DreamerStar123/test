@@ -9,10 +9,10 @@ import (
 )
 
 const (
-	host     = "nucleus-postgres.cx6cu628207f.us-east-2.rds.amazonaws.com"
+	host     = "localhost"
 	port     = 5432
-	user     = "root"
-	password = "IImbo4jlqXx8ec1BuFdX"
+	user     = "postgres"
+	password = "root"
 	dbname   = "postgres"
 	schema   = "public"
 
@@ -24,8 +24,21 @@ const (
 	// schema   = "schema"
 )
 
+func postgresQuery(query string) string {
+	pqQuery, n := "", 1
+	for _, v := range query {
+		if v != '?' {
+			pqQuery += string(v)
+		} else {
+			pqQuery += fmt.Sprintf("$%d", n)
+			n++
+		}
+	}
+	return pqQuery
+}
+
 func main() {
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s search_path=%s",
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s search_path=%s sslmode=disable",
 		host, port, user, password, dbname, schema)
 
 	fmt.Println(psqlInfo)
@@ -41,4 +54,11 @@ func main() {
 		log.Fatal("Cannot connect to database:", err)
 	}
 	fmt.Println("Connected to PostgreSQL!")
+
+	query := postgresQuery(`select * from checkout_session where currency=?`)
+	_, err = db.Exec(query, "usd")
+	if err != nil {
+		log.Fatal("Query exec failed:", query, err)
+	}
+	fmt.Println("Query exec success!")
 }
