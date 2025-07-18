@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "hi-base32": "^0.5.1",
+    "protobufjs": "^7.5.3"
+  }
+}
