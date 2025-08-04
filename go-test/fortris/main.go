@@ -233,7 +233,7 @@ func getAccountBalance(accountId string) {
 }
 
 func main() {
-	const callbackUrl = "https://webhook.site/befac219-ad84-40a1-9159-01abfc53c89c"
+	const callbackUrl = "https://webhook.site/openpayd"
 
 	// Load environment variables from .env file
 	err := godotenv.Load()
@@ -243,11 +243,11 @@ func main() {
 
 	// authorizePayout("d9ffbc61-ced2-4b1a-97bb-6d2c4eae4033", "569168", "XBT")
 	// getPayouts("120798e3-aef7-4a45-bbee-971be48eb970")
-	// createPayout(false, "327932", "XBT", 0.0000329, "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c", callbackUrl)
+	// createPayout(true, "854773", "XBT", 0.00009073, "bc1qs8juh6zanzmxv99pqpuuln7jl959d6fsj7zf2c", callbackUrl)
 	// createPayout(false, "145713", "USDT", 1, "0xBd3a34B02C570BD96bB16950F6b6A868D04747dd", callbackUrl)
 	// doVoidPayout("")
 
-	getDeposits("cd06b124-74f8-42c7-aa8b-6f17ce559b24")
+	// getDeposits("cd06b124-74f8-42c7-aa8b-6f17ce559b24")
 	// createDeposit("XBT", 0.00002, callbackUrl)
 	// createDeposit("USDT", 0.01, callbackUrl)
 	// createDeposit("ETH", 1, callbackUrl)
@@ -256,7 +256,7 @@ func main() {
 	// createDeposit("USDC", 1, callbackUrl)
 	// doVoidDeposit("8aec39ba-9bdf-4492-8c38-b2bf38477754", nonce)
 
-	// getAccountBalance(os.Getenv("XBT_ACCOUNT_ID"))
+	getAccountBalance(os.Getenv("XBT_ACCOUNT_ID"))
 	// getAccountBalance(os.Getenv("USDT_ACCOUNT_ID"))
 	// getAccountBalance(os.Getenv("BNB_ACCOUNT_ID"))
 }
