@@ -10,20 +10,29 @@ const contractAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 const transferTopic =
   "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef";
 
+async function findBlockNumber(blockNumber) {
+  return 0;
+}
+
 async function main() {
   const currentBlock = await provider.getBlockNumber();
 
+  console.time("getBlock");
+
   // Query last 1000 blocks
-  const fromBlock = currentBlock - 1;
+  const fromBlock = 23121805;
+  const block = await provider.getBlock(fromBlock);
+  console.timeEnd("getBlock");
+  console.log(block.timestamp);
 
   const logs = await provider.getLogs({
     address: contractAddress,
     topics: [transferTopic],
     fromBlock,
-    toBlock: currentBlock,
+    toBlock: fromBlock,
   });
 
-  logs.forEach((log) => {
+  logs.forEach(async (log) => {
     const from = "0x" + log.topics[1].slice(26); // last 40 hex chars = address
     const to = "0x" + log.topics[2].slice(26);
 
@@ -32,7 +41,7 @@ async function main() {
       log.data
     );
 
-    console.log({ from, to, value: value.toString() });
+    console.log(log);
   });
 }
 
