@@ -17,13 +17,10 @@ async function findBlockNumber(blockNumber) {
 async function main() {
   const currentBlock = await provider.getBlockNumber();
 
-  console.time("getBlock");
+  console.time("getLog");
 
   // Query last 1000 blocks
   const fromBlock = 23121805;
-  const block = await provider.getBlock(fromBlock);
-  console.timeEnd("getBlock");
-  console.log(block.timestamp);
 
   const logs = await provider.getLogs({
     address: contractAddress,
@@ -31,6 +28,8 @@ async function main() {
     fromBlock,
     toBlock: fromBlock,
   });
+
+  console.timeEnd("getLog");
 
   logs.forEach(async (log) => {
     const from = "0x" + log.topics[1].slice(26); // last 40 hex chars = address
@@ -41,7 +40,7 @@ async function main() {
       log.data
     );
 
-    console.log(log);
+    console.log({ ...log, value });
   });
 }
 
